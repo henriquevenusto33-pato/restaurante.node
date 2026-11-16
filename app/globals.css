@@ -64,9 +64,10 @@
 .card-qtd { margin-top: auto; }
 .home { min-height: 100vh; background: #f8f6f2; color: #3a2418; }
 
+.eita {display: flex; justify-content: flex-start; width: 1000px;}
 .home-topo { display: flex; justify-content: flex-end; padding: 20px 32px; }
 .home-topo nav { display: flex; align-items: center; gap: 28px; }
-.home-topo a { color: #3a2418; text-decoration: none; font-size: 1.2rem; }
+.home-topo a { color: orangered; text-decoration: none; font-size: 1.2rem; }
 .home-topo a.ativo { font-weight: 700; }
 .home-topo a.home-entrar {
   background: #cc4e00; color: #fff; padding: 10px 22px; border-radius: 999px;

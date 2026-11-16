@@ -5,6 +5,9 @@ export default function Home() {
     <div className="home">
       <header className="home-topo">
         <nav>
+          <div className="eita">
+            <h2 className="japones">Nakasawa Lanches</h2>
+          </div>
           <Link href="/" className="ativo">HOME</Link>
           <Link href="/cardapio">CARDÁPIO</Link>
           <Link href="/quem-somos">QUEM SOMOS</Link>
@@ -17,7 +20,7 @@ export default function Home() {
         <h1>NAKASAWA LANCHES</h1>
       </section>
 
-      <section className="home-promos">
+      <section className="home-prsomos">
         <div className="promo">
           <h2>Combo Especial Sushi + Temaki</h2>
           <p>O combo perfeito para compartilhar! Com 10% de desconto.</p>
