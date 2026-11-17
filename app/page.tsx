@@ -16,11 +16,13 @@ export default function Home() {
       </header>
 
       <section className="home-hero">
+        <div className="banner-conteudo">
         <p>Seja bem vindo ao</p>
         <h1>NAKASAWA LANCHES</h1>
+        </div>
       </section>
 
-      <section className="home-prsomos">
+      <section className="home-promos">
         <div className="promo">
           <h2>Combo Especial Sushi + Temaki</h2>
           <p>O combo perfeito para compartilhar! Com 10% de desconto.</p>

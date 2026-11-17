@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Anton&display=swap');
+
 .loja { min-height: 100vh; background: #fff; color: #222; }
 
 .loja-topo {
@@ -64,24 +66,28 @@
 .card-qtd { margin-top: auto; }
 .home { min-height: 100vh; background: #f8f6f2; color: #3a2418; }
 
-.eita {display: flex; justify-content: flex-start; width: 1000px;}
-.home-topo { display: flex; justify-content: flex-end; padding: 20px 32px; }
-.home-topo nav { display: flex; align-items: center; gap: 28px; }
-.home-topo a { color: orangered; text-decoration: none; font-size: 1.2rem; }
-.home-topo a.ativo { font-weight: 700; }
+.eita {display: flex; justify-content: flex-start; width: auto; margin-right: auto; margin-left: 20px;}
+.japones {text-align: start; color: white;}
+.home-topo { display: flex; align-items: center; width: 100%; gap: 28px; background-color: #cc4e00;}
+.home-topo nav { display: flex; align-items: center; gap: 28px; width: 100%; }
+.home-topo a { color: #ffff; text-decoration: none; font-size: 1.2rem; transition: 0.3s; padding: 10px 22px; border-radius: 999px; margin-right: 20px; }
+.home-topo a:hover { color: #ff6600; background-color: #eee; transform: scale(1.2); }
+.home-topo a.ativo { color: #eee; font-weight: 700; background-color: #7e3c06; padding: 10px 22px; border-radius: 999px;}
 .home-topo a.home-entrar {
-  background: #cc4e00; color: #fff; padding: 10px 22px; border-radius: 999px;
+  background: #ffff; color: #cc4e00; padding: 10px 22px; border-radius: 999px;
 }
 
 .home-hero {
-  height: 320px; display: flex; flex-direction: column;
+  position: relative;
+  min-height: 400px; display: flex; 
   align-items: center; justify-content: center;
   background-color: #6b5a4e;
-  background-image: linear-gradient(#ffffff55, #ffffff55), url("/hero.jpg");
+  background-image: linear-gradient(#ffffff55, #ffffff55), url("../app/assets/images/homeharuy-1742836067011.jpg");
   background-size: cover; background-position: center;
 }
-.home-hero p { font-size: 1.6rem; font-style: italic; }
-.home-hero h1 { font-size: 3.2rem; letter-spacing: 2px; color: #111; }
+.banner-conteudo { position: relative; z-index: 1; text-align: center; display: flex; flex-direction: column; align-items: center; transform: translateY(-35px); }
+.banner-conteudo p { font-family: "Alex Brush", cursive; font-size: 4.6rem; margin-bottom: -45px; align-self: center; transform: translateX(-250px); }
+.banner-conteudo h1 { font-family: "Anton", sans-serif; font-size: 5.5rem; letter-spacing: 2px; color: #111; margin: 0;  font-weight: 100;}
 
 .home-promos {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
