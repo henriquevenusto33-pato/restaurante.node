@@ -97,6 +97,12 @@ export default function Cardapio({ itens, clientes }: { itens: Item[]; clientes:
         </button>
       </header>
 
+      <section className="home-hero2">
+        <div className="banner-conteudo">
+        <p>Seja bem vindo ao</p>
+        <h1>Cardapio</h1>
+        </div>
+      </section>
       <div className="loja-corpo">
         <nav className="loja-menu">
           {CATEGORIAS.map((c) => (
@@ -110,6 +116,7 @@ export default function Cardapio({ itens, clientes }: { itens: Item[]; clientes:
           ))}
         </nav>
 
+        <div className="loja-conteudo">
         <main className="loja-principal">
           <h2 className="loja-titulo">{busca ? "Resultados da busca" : categoria}</h2>
 
@@ -171,5 +178,6 @@ export default function Cardapio({ itens, clientes }: { itens: Item[]; clientes:
         )}
       </div>
     </div>
+  </div>
   );
 }
