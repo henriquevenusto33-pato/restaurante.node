@@ -111,6 +111,15 @@ html, body {
   background-image: linear-gradient(#ff800055, #ff6a0055), url("../app/assets/images/homeharuy-1742836067011.jpg");
   background-size: cover; background-position: center;
 }
+.home-entrar{ 
+  background-color: #cc4e00;
+  border: 1px solid #ffff;
+  color: #ffff;
+  cursor: pointer;
+  font: inherit;
+  padding: 30px;
+  border-radius: 30px;
+}
 .banner-conteudo { position: relative; z-index: 1; text-align: center; display: flex; flex-direction: column; align-items: center; transform: translateY(-35px); }
 .banner-conteudo p { font-family: "Alex Brush", cursive; font-size: 4.6rem; margin-bottom: -45px; align-self: center; transform: translateX(-250px); }
 .banner-conteudo h1 { font-family: "Anton", sans-serif; font-size: 5.5rem; letter-spacing: 2px; color: #111; margin: 0;  font-weight: 100;}
@@ -200,9 +209,7 @@ html, body {
 }
 
 button.home-entrar {
-  border: none;
-  cursor: pointer;
-  font: inherit;
-  padding: 30px;
-  border-radius: 30px;
+  transform: scale(1.1);
+  background-color: #eee;
+  color: #cc4e00;
 }
