@@ -91,7 +91,13 @@ export default function Cardapio({ itens, clientes }: { itens: Item[]; clientes:
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
         />
-        <button className="loja-icone" title="Conta">👤</button>
+         {logado ? (
+            <form action={sair}>
+              <button type="submit" className="home-entrar">SAIR</button>
+            </form>
+          ) : (
+            <Link href="/cadastro" className="home-entrar">ENTRAR</Link>
+          )}
         <button className="loja-icone" title="Carrinho" onClick={() => setAberto(!aberto)}>
           🛍️ {totalItens > 0 && <span className="loja-badge">{totalItens}</span>}
         </button>
