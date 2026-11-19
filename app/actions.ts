@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/utils/supabase/server";
+
 export async function pedir(formData: FormData) {
     const supabase = await createClient();
 
@@ -24,7 +25,7 @@ export async function pedir(formData: FormData) {
     revalidatePath("/");
 }
 
-export async function cadastrar(formData: FormData){
+export async function cadastrar(formData: FormData) {
     const supabase = await createClient();
 
     const nome_cliente = formData.get("nome_cliente");
@@ -32,23 +33,25 @@ export async function cadastrar(formData: FormData){
     const telefone_cliente = formData.get("telefone_cliente");
     const senha_cliente = formData.get("senha_cliente");
 
-    const {error} = await supabase
+    const { error } = await supabase
     .from('cliente')
     .insert([   
         {
-        nome_cliente: nome_cliente,
-        endereco_cliente: endereco_cliente,
-        telefone_cliente: telefone_cliente,
-        senha_cliente: senha_cliente
-
+          nome_cliente: nome_cliente,
+          endereco_cliente: endereco_cliente,
+          telefone_cliente: telefone_cliente,
+          senha_cliente: senha_cliente
         }
     ]);
-    if(error){
-        console.error("Erro ao cadastrar cliente");
+
+    if (error) {
+        console.error("Erro ao cadastrar cliente:", error.message);
         return;
     }
+    
     revalidatePath("/");
 }
+
 export async function finalizarPedido(
   itens: { id_cardapio: number; quantidade: number }[],
   id_cliente: number
