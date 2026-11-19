@@ -138,3 +138,7 @@ export async function finalizarPedido(
   revalidatePath("/");
   return { ok: true };
 }
+export async function sair() {
+  (await cookies()).delete("id_cliente");
+  redirect("/");
+}

@@ -199,3 +199,8 @@ html, body {
     margin: 10px 0;
 }
 
+button.home-entrar {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}

@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
+import { sair } from "./actions";
 
-export default function Home() {
+export default async function Home() {
+  const logado = (await cookies()).has("id_cliente");
+
   return (
     <div className="home">
       <header className="home-topo">
@@ -11,14 +15,21 @@ export default function Home() {
           <Link href="/" className="ativo">HOME</Link>
           <Link href="/cardapio">CARDÁPIO</Link>
           <Link href="/quem-somos">QUEM SOMOS</Link>
-          <Link href="/cadastro" className="home-entrar">ENTRAR</Link>
+
+          {logado ? (
+            <form action={sair}>
+              <button type="submit" className="home-entrar">SAIR</button>
+            </form>
+          ) : (
+            <Link href="/cadastro" className="home-entrar">ENTRAR</Link>
+          )}
         </nav>
       </header>
 
       <section className="home-hero">
         <div className="banner-conteudo">
-        <p>Seja bem vindo ao</p>
-        <h1>NAKASAWA LANCHES</h1>
+          <p>Seja bem vindo ao</p>
+          <h1>NAKASAWA LANCHES</h1>
         </div>
       </section>
 
