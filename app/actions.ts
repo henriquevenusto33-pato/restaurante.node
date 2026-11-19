@@ -89,7 +89,7 @@ export async function cadastrar(
     maxAge: 60 * 60 * 24 * 7, // 7 dias
   });
 
-  redirect("/page.tsx"); // se o menu estiver em app/page.tsx, troque por "/"
+  redirect("/"); // se o menu estiver em app/page.tsx, troque por "/"
 }
 
 /* ----------------------------- FINALIZAR PEDIDO ------------------------------ */
