@@ -203,4 +203,6 @@ button.home-entrar {
   border: none;
   cursor: pointer;
   font: inherit;
+  padding: 30px;
+  border-radius: 30px;
 }
