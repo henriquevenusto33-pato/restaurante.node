@@ -17,15 +17,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  experimental: {
-    serverActions: {
-      allowedOrigins: ["localhost:3000", "seu-dominio-ou-tunel.app"], // ajuste conforme a URL do seu navegador
-    },
-  },
-};
-
-export default nextConfig;
